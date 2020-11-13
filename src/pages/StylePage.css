@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+
+}
+.div-ingredients-btn, .div-recipes-btn {
+    display: flex;
+    background: url('../images/front-page-bg.jpg') center center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 100vh;
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+  
+  .front-btn{
+    display: flex;
+    color: white;
+    font-size: 6vw;
+    background-color: transparent;
+    border-color: transparent;
+    justify-content: center;
+    background-color: none;
+    margin: 10vh 0 0 15vh;
+    padding: 5vh;
+    text-shadow: 2px 2px 5px grey;  
+    transition: all .2s ease-in-out;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+     -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 5s;
+         
+
+  } 
+  .front-btn:hover{
+      cursor: pointer;
+      /* color:grey; */
+      transform: scale(1.1);
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@media (max-width: 768px){
+    .front-btn{
+        font-size: 60px;
+    }
+}
+
+
+
+  
+  /*# sourceMappingURL=home.css.map */
+/* -----END Home page Style-----*/
