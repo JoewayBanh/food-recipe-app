@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import "./StylePage.css";
 
@@ -8,7 +7,7 @@ const FrontBtns = () => {
       <NavLink exact to="/Ingredients">
         <button className="front-btn">Ingredients</button>
       </NavLink>
-      <NavLink exact to="/RecipePage">
+      <NavLink exact to="/Recipe-Page">
         <button className="front-btn">Recipes</button>
       </NavLink>
     </div>

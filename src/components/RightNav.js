@@ -1,18 +1,30 @@
-import React from "react";
 import styled from "styled-components";
-// import Home from './Home';
-// import Ingredients from './Ingredients';
-// import Recipe from './RecipePage';
-// import Contact from './Contact';
-// import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { Link } from "react-router-dom";
+
+const RightNav = ({ open }) => {
+  return (
+    <Ul open={open}>
+      <Link to="/">
+        <li>Home</li>
+      </Link>
+      <Link to="/Ingredients">
+        <li>Ingredients</li>
+      </Link>
+      <Link to="/Recipe-Page">
+        <li>Recipes</li>
+      </Link>
+      <Link to="/Contact">
+        <li>Contact</li>
+      </Link>
+    </Ul>
+  );
+};
 
 const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
   font-size: 1.5em;
-  // height:100%;
 
   li {
     padding: 18px 10px;
@@ -43,22 +55,4 @@ const Ul = styled.ul`
     }
   }
 `;
-
-const RightNav = ({ open }) => {
-  return (
-    <Ul open={open}>
-      {/* <Link to="/home"><li>Home</li></Link> */}
-      <Link to="/ingredients">
-        <li>Ingredients</li>
-      </Link>
-      <Link to="/recipepage">
-        <li>Recipes</li>
-      </Link>
-      <Link to="/contact">
-        <li>Contact</li>
-      </Link>
-    </Ul>
-  );
-};
-
 export default RightNav;

@@ -1,7 +1,21 @@
-import React, { useState } from 'react';
-import RightNav from './RightNav';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import RightNav from "./RightNav";
+import styled from "styled-components";
 
+const Burger = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <div />
+        <div />
+        <div />
+      </StyledBurger>
+      <RightNav open={open} />
+    </>
+  );
+};
 
 const StyledBurger = styled.div`
   width: 2rem;
@@ -11,7 +25,6 @@ const StyledBurger = styled.div`
   right: 20px;
   z-index: 20;
   display: none;
-  
 
   @media (max-width: 768px) {
     display: flex;
@@ -22,39 +35,24 @@ const StyledBurger = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => open ? 'yellow' : 'yellowgreen'};
+    background-color: ${({ open }) => (open ? "yellow" : "yellowgreen")};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
 
     &:nth-child(1) {
-      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
 
     &:nth-child(2) {
-      transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
-      opacity: ${({ open }) => open ? 0 : 1};
+      transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
+      opacity: ${({ open }) => (open ? 0 : 1)};
     }
 
     &:nth-child(3) {
-      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
 `;
 
-const Burger = () => {
-  const [open, setOpen] = useState(false)
-  
-  return (
-    <>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
-        <div />
-        <div />
-        <div />
-      </StyledBurger>
-      <RightNav open={open}/>
-    </>
-  )
-}
-
-export default Burger
+export default Burger;

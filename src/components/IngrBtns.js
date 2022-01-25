@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from "react";
-// import './ingBtns.css'
+import "./IngBtns.css";
 const IngrBtns = (props) => {
   const [online, setOnline] = useState(false);
   const toggle = (clickedButtonValue) => {
     setOnline(!online);
-    //   console.log(online)
+
     if (online && props.search.includes(clickedButtonValue)) {
       props.setSearch(props.search.replace(clickedButtonValue, ""));
       console.log("IF HAS PROCCED FROM IngrBtns");
